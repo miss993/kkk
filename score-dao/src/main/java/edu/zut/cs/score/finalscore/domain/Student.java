@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 import edu.zut.cs.score.base.domain.BaseEntity;
 
-@Table(name = "T_ADMIN_USER")
+@Table(name = "The Final Score")
 @Entity
 public class Student extends BaseEntity {
 
@@ -15,41 +15,40 @@ public class Student extends BaseEntity {
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "USERNAME")
-	String username;
+	@Column(name = "STUDENTNAME")
+	String studentname;
 
-	@Column(name = "PASSWORD")
-	String password;
+	@Column(name = "STUDENTNO")
+	String studentno;
 
-	@Column(name = "EMAIL")
-	String email;
-
+	@Column(name = "FINALSCORE")
+	String finalscore;
 	
 
 	
 
-	public String getUsername() {
-		return username;
+	public String getStudentname() {
+		return studentname;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getStudentno() {
+		return studentno;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setStudentno(String studentno) {
+		this.studentno = studentno;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getFinalscore() {
+		return finalscore;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setFinalscore(String finalscore) {
+		this.finalscore = finalscore;
 	}
 
 }
