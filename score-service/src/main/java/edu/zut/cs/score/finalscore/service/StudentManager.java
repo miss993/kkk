@@ -1,5 +1,13 @@
 package edu.zut.cs.score.finalscore.service;
 
-public interface StudentManager {
+import java.util.List;
 
+import edu.zut.cs.score.finalscore.domain.Student;
+import edu.zut.cs.score.base.service.GenericManager;
+
+public interface StudentManager extends GenericManager<Student, Long>{
+
+	List<Student> findAll();
+
+	Student findbyUsername(String username);
 }
