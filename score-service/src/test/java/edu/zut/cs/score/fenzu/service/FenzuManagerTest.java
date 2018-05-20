@@ -1,5 +1,5 @@
 package edu.zut.cs.score.fenzu.service;
 
-public class FenzuManagerTest {
+public class FenzumanagerTest {
 
 }
