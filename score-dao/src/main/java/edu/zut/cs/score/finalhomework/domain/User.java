@@ -5,11 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+
 import edu.zut.cs.score.base.domain.BaseEntity;
 
-@Table(name = "T_FINALHOMEWORK_STUDENT")
+@Table(name = "T_FINALHOMEWORK_USER")
 @Entity
 public class User extends BaseEntity {
+	
+	
 	private static final long serialVersionUID = -4376674977047164142L;
 
 	@Column(name = "USERNAME")
@@ -20,7 +24,17 @@ public class User extends BaseEntity {
 
 	@Column(name = "EMAIL")
 	String email;
+	public Group getGroup() {
+		return group;
+	}
 
+	public void setGroup(Group group) {
+		this.group = group;
+	}
+
+	@ManyToOne
+	@JoinColumn(name = "GROUP_ID")
+	Group group;
 	
 	public String getUsername() {
 		return username;

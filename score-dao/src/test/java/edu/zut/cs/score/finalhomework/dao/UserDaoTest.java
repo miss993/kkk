@@ -16,13 +16,13 @@ public class UserDaoTest extends GenericDaoTestCase<Long,User,UserDao> {
 	 */
 	private static final Logger logger =LogManager.getLogger(UserDaoTest.class.getName());
 	@Autowired
-	UserDao studentdao;
+	UserDao userdao;
 	
 	@Test
 	public void testFindAll() {
-		List<User> result=this.studentdao.findAll();
+		List<User> result=this.userdao.findAll();
 		if(logger.isInfoEnabled()) {
-			logger.info("testFindAll() - List<Student> result={}", result); //$NON-NLS-1$
+			logger.info("testFindAll() - List<User> result={}", result); //$NON-NLS-1$
 			}
 		}
 }
