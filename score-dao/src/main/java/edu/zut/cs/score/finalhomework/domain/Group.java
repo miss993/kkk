@@ -23,13 +23,10 @@ public class Group extends BaseTreeEntity<Group> {
 	 * 
 	 */
 	private static final long serialVersionUID = -1751952224371998469L;
-
 	@Column(name = "NAME")
 	String name;
-
 	@OneToMany(mappedBy = "group", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
 	Set<User> student;
-
 	public String getName() {
 		return name;
 	}
