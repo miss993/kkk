@@ -18,7 +18,6 @@ public class Student extends BaseEntity {
 
 	@Column(name = "ADDRESS")
 	String address;
-
 	@Column(name = "POSTCODE")
 	String postcode;
 
