@@ -4,10 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
-import org.hibernate.context.internal.ThreadLocalSessionContext;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import edu.zut.cs.score.base.service.GenericManagerTestCase;
 import edu.zut.cs.score.finalhomework.domain.User;
 
