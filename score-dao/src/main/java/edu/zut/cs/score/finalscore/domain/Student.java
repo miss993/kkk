@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 import edu.zut.cs.score.base.domain.BaseEntity;
 
-@Table(name = "The Final Score")
+@Table(name = "TheFinalScore")//我自己的表名
 @Entity
 public class Student extends BaseEntity {
 
@@ -15,13 +15,13 @@ public class Student extends BaseEntity {
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "STUDENTNAME")
+	@Column(name = "STUDENTNAME")//姓名
 	String studentname;
 
-	@Column(name = "STUDENTNO")
+	@Column(name = "STUDENTNO")//学号
 	String studentno;
 
-	@Column(name = "FINALSCORE")
+	@Column(name = "FINALSCORE")//成绩
 	String finalscore;
 	
 

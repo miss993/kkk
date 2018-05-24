@@ -18,7 +18,7 @@ public class StudentDaoTest extends GenericDaoTestCase<Long, Student, StudentDao
 
 		List<Student> result = this.studentDao.findAll();
 		if (logger.isInfoEnabled()) {
-            logger.info("testFindAll() - List<User> result={}", result); //$NON-NLS-1$
+            logger.info("testFindAll() - List<Student> result={}", result); //$NON-NLS-1$
         }
 
     }
