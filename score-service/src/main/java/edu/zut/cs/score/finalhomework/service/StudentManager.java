@@ -4,7 +4,6 @@ import java.util.List;
 
 import edu.zut.cs.score.base.service.GenericManager;
 import edu.zut.cs.score.finalhomework.domain.Student;
-import edu.zut.cs.score.finalhomework.domain.User;
 
 public interface StudentManager extends GenericManager<Student, Long>{
 	/**

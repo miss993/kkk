@@ -1,37 +1,37 @@
 package edu.zut.cs.score.finalscore.service;
-
-import static org.junit.Assert.assertEquals;
+import edu.zut.cs.score.finalscore.domain.Student;
+import edu.zut.cs.score.base.service.GenericManagerTestCase;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import static org.junit.Assert.assertEquals;
 
+public class StudentManagerTest extends GenericManagerTestCase<Long, Student, StudentManager> {
 
-import edu.zut.cs.score.finalscore.domain.Student;
+    @Autowired
+    StudentManager userManager;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes = AdminServiceConfig.class)
-public class StudentManagerTest {
+    public StudentManagerTest() {
+        super(Student.class);
+    }
 
-	@Autowired
-	StudentManager studentManager;
+    @Test
+    public void testFindAll() {
+        List<Student> all = this.userManager.findAll();
+        assertEquals(all.size(), 100);
+    }
 
-	@Test
-	public void testFindAll() {
-		List<Student> all = this.studentManager.findAll();
-		assertEquals(all.size(), 100);
-	}
+    @Test
+    public void testFindbyUsername() {
+        String studentname = "world";
+        Student expected_user = new Student();
+        // expected_user.setStudentname(studentname);
+        Student user = this.userManager.findbyStudentname(studentname);
+        this.logger.info(user);
+        // assertEquals(user.getUsername(), expected_user.getUsername());
+        assertEquals(user, expected_user);
+    }
 
-	@Test
-	public void testFindbyStudentname() {
-		String studentname = "world";
-		Student expected_user = new Student();
-		Student student = this.studentManager.findbyStudentname(studentname);
-		// assertEquals(user.getStudentname(), expected_user.getStudentname());
-		assertEquals(student, expected_user);
-	}
 }
