@@ -17,7 +17,6 @@ public class UserDaoTest extends GenericDaoTestCase<Long,User,UserDao> {
 	private static final Logger logger =LogManager.getLogger(UserDaoTest.class.getName());
 	@Autowired
 	UserDao userdao;
-	
 	@Test
 	public void testFindAll() {
 		List<User> result=this.userdao.findAll();

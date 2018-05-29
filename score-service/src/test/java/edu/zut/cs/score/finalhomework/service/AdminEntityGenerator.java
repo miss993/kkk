@@ -15,6 +15,8 @@ public class AdminEntityGenerator extends GenericGenerator{
 	@Autowired
 	RoleManager roleManager;
 	@Test
+	
+	
 	public void gen_group() {
 		for (int i = 0; i < 10; i++) {
 			Group g = new Group();

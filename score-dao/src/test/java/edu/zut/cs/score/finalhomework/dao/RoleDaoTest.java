@@ -17,10 +17,8 @@ public class RoleDaoTest extends GenericDaoTestCase<Long, Role, RoleDao> {
 	 * Logger for this class
 	 */
 
-
 	@Autowired
 	RoleDao roleDao;
-
 	@Test
 	public void test() {
 		Role r = new Role();
