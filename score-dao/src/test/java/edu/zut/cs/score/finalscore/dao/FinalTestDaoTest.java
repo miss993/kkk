@@ -1,5 +1,5 @@
 package edu.zut.cs.score.finalscore.dao;
 
-public class FinalDaoTest {
+public class FinalTestDaoTest {
 
 }

@@ -1,5 +1,5 @@
 package edu.zut.cs.score.finalscore.service.impl;
 
-public class FinalManagerImpl {
+public class FinalTestManagerImpl {
 
 }
