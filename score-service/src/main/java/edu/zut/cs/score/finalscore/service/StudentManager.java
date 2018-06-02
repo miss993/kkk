@@ -7,7 +7,7 @@ import edu.zut.cs.score.base.service.GenericManager;
 
 public interface StudentManager extends GenericManager<Student, Long>{
 
-	List<Student> findAll();
+	List<Student> findbyStudentno(String studentno);
 
-	Student findbyStudentname(String studentname);
+	List<Student> findbyStudentname(String studentname);
 }

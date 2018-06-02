@@ -15,37 +15,38 @@ public class Student extends BaseEntity {
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "STUDENTNAME")//姓名
+	@Column//姓名
 	String studentname;
 
-	@Column(name = "STUDENTNO")//学号
+	@Column//学号
 	String studentno;
 
-	@Column(name = "FINALSCORE")//成绩
+	@Column//成绩
 	String finalscore;
 	
 
 	
-
 	public String getStudentname() {
 		return studentname;
 	}
-
+	
+	public String getStudentno() {
+		return studentno;
+	}
+	
+	public String getFinalscore() {
+		return finalscore;
+	}
+	
 	public void setStudentname(String studentname) {
 		this.studentname = studentname;
 	}
 
-	public String getStudentno() {
-		return studentno;
-	}
-
+	
 	public void setStudentno(String studentno) {
 		this.studentno = studentno;
 	}
 
-	public String getFinalscore() {
-		return finalscore;
-	}
 
 	public void setFinalscore(String finalscore) {
 		this.finalscore = finalscore;
