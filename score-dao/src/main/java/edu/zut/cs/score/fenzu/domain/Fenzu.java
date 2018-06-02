@@ -1,35 +1,39 @@
 package edu.zut.cs.score.fenzu.domain;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import edu.zut.cs.score.base.domain.BaseEntity;
 
-@Table(name = "TheFinalScore")//我自己的表名
+@Table(name = "Fenzumessage")//我自己的表名
 @Entity
 public class Fenzu extends BaseEntity {
 
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "STUDENTNAME")//姓名
-	String studentname;
-
-	@Column(name = "STUDENTNO")//学号
-	String studentno;
-
-	@Column(name = "FINALSCORE")//成绩
-	String finalscore;
 	
+	String name;//姓名
 
 	
+	String studentno;//学号
 
-	public String getStudentname() {
-		return studentname;
+	
+	String studentclass;//班级
+	 
+	
+	String studentsex;//性别
+	
+	
+	String studentdoing;//任务
+	
+	String studentzhiwu;//职务
+
+	public String getName() {
+		return name;
 	}
 
-	public void setStudentname(String studentname) {
-		this.studentname = studentname;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getStudentno() {
@@ -40,12 +44,41 @@ public class Fenzu extends BaseEntity {
 		this.studentno = studentno;
 	}
 
-	public String getFinalscore() {
-		return finalscore;
+	public String getStudentclass() {
+		return studentclass;
 	}
 
-	public void setFinalscore(String finalscore) {
-		this.finalscore = finalscore;
+	public void setStudentclass(String studentclass) {
+		this.studentclass = studentclass;
 	}
 
+	public String getStudentsex() {
+		return studentsex;
+	}
+
+	public void setStudentsex(String studentsex) {
+		this.studentsex = studentsex;
+	}
+
+	public String getStudentdoing() {
+		return studentdoing;
+	}
+
+	public void setStudentdoing(String studentdoing) {
+		this.studentdoing = studentdoing;
+	}
+
+	public String getStudentzhiwu() {
+		return studentzhiwu;
+	}
+
+	public void setStudentzhiwu(String studentzhiwu) {
+		this.studentzhiwu = studentzhiwu;
+	}
+	 
+	
+
+	
+
+	
 }
