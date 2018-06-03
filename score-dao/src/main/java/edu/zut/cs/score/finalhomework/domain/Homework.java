@@ -27,7 +27,17 @@ public class Homework extends BaseEntity{
 
 	@Column
 	String address;
+	@Column
+	String major;
+	
 
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
 
 	public String getName() {
 		return name;
