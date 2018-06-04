@@ -2,6 +2,7 @@ package edu.zut.cs.score.finalhomework.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers;
@@ -9,12 +10,15 @@ import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 import org.springframework.stereotype.Component;
 
 import edu.zut.cs.score.base.service.impl.GenericManagerImpl;
+import edu.zut.cs.score.finalhomework.dao.HomeworkDao;
 import edu.zut.cs.score.finalhomework.domain.Homework;
 import edu.zut.cs.score.finalhomework.service.HomeworkManager;
 
 @Component
 public class HomeworkManagerImpl extends GenericManagerImpl<Homework, Long> implements HomeworkManager{
 
+	HomeworkDao homeworkDao;
+	
 	@Override
 	public List<Homework> findByCode(String code) {
 		// 创建查询条件数据对象
@@ -49,7 +53,11 @@ public class HomeworkManagerImpl extends GenericManagerImpl<Homework, Long> impl
 				return result;
 	}
 
-	
+	@Autowired
+	public void setHomeworkDao(HomeworkDao homeworkDao) {
+		this.homeworkDao=homeworkDao;
+		this.dao=this.homeworkDao;
+	}
 	
 	
 	

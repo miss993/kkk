@@ -20,7 +20,7 @@ public class HomeworkManagerTest extends GenericManagerTestCase<Long, Homework, 
 		super(Homework.class);
 	}
 	@Autowired
-	public void setStudentManager(HomeworkManager homeworkManager) {
+	public void setHomeworkManager(HomeworkManager homeworkManager) {
 		this.homeworkManager = homeworkManager;
 		this.manager = this.homeworkManager;
 	}
@@ -42,7 +42,7 @@ public class HomeworkManagerTest extends GenericManagerTestCase<Long, Homework, 
 		assertEquals("张三", result.get(0).getName());
 	}
 	@Test
-	public void testFindBycode() {
+	public void testFindByCode() {
 		String code = this.entity.getCode();
 		List<Homework> result = this.homeworkManager.findByCode(code);
 		assertEquals(code, result.get(0).getCode());
