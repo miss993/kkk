@@ -1,6 +1,5 @@
 package edu.zut.cs.score.finalhomework.domain;
 
-
-public enum Gender {
+public enum Sex {
 	Female, Male;
 }

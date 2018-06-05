@@ -7,10 +7,10 @@ Ext.define('homework.controller.HomeworkController', {
 	init : function() {
 		this.control({
 			'homeworkGrid' : {
-				itemdblclick : this.editStudent
+				itemdblclick : this.editHomework
 			},
 			'homeworkEdit button[action=save]' : {
-				click : this.updateStudent
+				click : this.updateHomework
 			}
 		});
 	},

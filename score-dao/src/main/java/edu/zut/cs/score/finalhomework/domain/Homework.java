@@ -17,7 +17,7 @@ public class Homework extends BaseEntity{
 	String name;
 
 	@Column
-	String sex;
+	Sex sex;
 
 	@Column
 	String code;
@@ -47,11 +47,11 @@ public class Homework extends BaseEntity{
 		this.name = name;
 	}
 
-	public String getSex() {
+	public Sex getSex() {
 		return sex;
 	}
 
-	public void setSex(String sex) {
+	public void setSex(Sex sex) {
 		this.sex = sex;
 	}
 

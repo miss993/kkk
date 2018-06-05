@@ -30,6 +30,10 @@ Ext.define('homework.view.HomeworkEdit', {
 				xtype : 'textfield',
 				name : 'grade',
 				fieldLabel : '年级'
+			}, {
+				xtype : 'textfield',
+				name : 'address',
+				fieldLabel : '班级'
 			}]
 		} ];
 		this.buttons = [ {

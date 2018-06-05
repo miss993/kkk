@@ -25,6 +25,10 @@ Ext.define('homework.model.HomeworkModel', {
 		name : 'grade',
 		type : 'string',
 		sortable : true
+	}, {
+		name : 'address',
+		type : 'string',
+		sortable : true
 	},{
 		name : 'dateCreated',
 		type : 'date',
