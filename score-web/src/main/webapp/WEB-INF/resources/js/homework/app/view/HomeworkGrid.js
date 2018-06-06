@@ -63,7 +63,7 @@ Ext.define('homework.view.HomeworkGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : studentStore,
+		store : homeworkStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

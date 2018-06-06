@@ -44,7 +44,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'homerwork.HomeworkModel',
+			model : 'homework.HomeworkModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
