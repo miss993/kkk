@@ -1,6 +1,6 @@
 var pageSize = 20;
 
-var finaltestStore = Ext.create('finaltest.store.FinalTestStore');
+var finaltestStore = Ext.create('finalacore.store.FinalTestStore');
 
 Ext.define('finaltest.view.FinalTestGrid', {
 	extend : 'Ext.grid.GridPanel',

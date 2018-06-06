@@ -1,6 +1,6 @@
 var pageSize = 20;
 
-Ext.define('finaltest.store.FinalTestStore', {
+Ext.define('finalscore.store.FinalTestStore', {
 	extend : 'Ext.data.Store',
 	alias : 'widget.finaltestStore',
 	autoLoad : true,

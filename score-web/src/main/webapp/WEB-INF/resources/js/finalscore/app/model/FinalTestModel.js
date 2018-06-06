@@ -1,4 +1,4 @@
-Ext.define('finaltest.model.FinalTestModel', {
+Ext.define('finalscore.model.FinalTestModel', {
 	extend : 'Ext.data.Model',
 	alias : 'widget.finaltestModel',
 	fields : [ {

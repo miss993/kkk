@@ -1,6 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('finaltest.FinalTestModel', {
+Ext.define('finalscore.FinalTestModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'sname',

@@ -11,14 +11,14 @@ import edu.zut.cs.score.finalscore.domain.FinalTest;
 import edu.zut.cs.score.finalscore.service.FinalTestManager;
 
 @Controller
-@RequestMapping("/finalscore/finaltest")
+@RequestMapping("/finalscore/finalscore")
 public class FinalTestController extends GenericController<FinalTest, Long, FinalTestManager>{
 
 	FinalTestManager finaltestManager;
 
 	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
 	public String index() {
-		String result = "/finaltest/index";
+		String result = "/finalscore/index";
 		return result;
 	}
 
