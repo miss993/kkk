@@ -1,5 +1,6 @@
 package edu.zut.cs.score.fenzu.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -11,23 +12,23 @@ public class Fenzu extends BaseEntity {
 
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	
+	@Column
 	String name;//姓名
 
-	
+	@Column
 	String studentno;//学号
 
-	
+	@Column
 	String studentclass;//班级
 	 
+	@Column
+	Studentsex studentsex;//性别
 	
-	String studentsex;//性别
-	
-	
+	@Column
 	String studentdoing;//任务
-	
+	@Column
 	String studentzhiwu;//职务
-
+    
 	public String getName() {
 		return name;
 	}
@@ -52,11 +53,13 @@ public class Fenzu extends BaseEntity {
 		this.studentclass = studentclass;
 	}
 
-	public String getStudentsex() {
+
+
+	public Studentsex getStudentsex() {
 		return studentsex;
 	}
 
-	public void setStudentsex(String studentsex) {
+	public void setStudentsex(Studentsex studentsex) {
 		this.studentsex = studentsex;
 	}
 
