@@ -20,6 +20,7 @@ public class FenzuEntityGenerator extends GenericGenerator {
    List<Fenzu> fenzuList;
    FenzuManager fenzuManager;
    @Autowired
+   
    public void setFenzuManager(FenzuManager fenzuManager ) {
 	   this.fenzuManager=fenzuManager;
    }

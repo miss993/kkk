@@ -16,6 +16,7 @@ public class FenzuManagerTest extends GenericManagerTestCase<Long,Fenzu,FenzuMan
 	public FenzuManagerTest() {
 		super(Fenzu.class);
 	}
+	
 	@Autowired
 	public void setStudentManager(FenzuManager fenzuManager) {
 		this.fenzuManager=fenzuManager;

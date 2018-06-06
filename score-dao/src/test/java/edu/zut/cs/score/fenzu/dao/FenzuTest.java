@@ -6,6 +6,10 @@ import edu.zut.cs.score.fenzu.domain.Fenzu;
 import edu.zut.cs.score.base.dao.GenericDaoTestCase;
 public class FenzuTest extends GenericDaoTestCase <Long,Fenzu,FenzuDao>{
 	@Autowired
+	
+	
+	
+	
 	FenzuDao fenzuDao;
 	@Test
 	public void testFindAll() {

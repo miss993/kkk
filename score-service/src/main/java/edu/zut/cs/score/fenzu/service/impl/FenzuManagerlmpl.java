@@ -15,6 +15,7 @@ import edu.zut.cs.score.fenzu.service.impl.FenzuManagerlmpl;
 @Component
 public class FenzuManagerlmpl extends GenericManagerImpl<Fenzu,Long> implements FenzuManager{
 	FenzuDao fenzuDao;
+	
 	@Override
 	public List<Fenzu> findByStudentno(String studentno){
 		Fenzu objk=new Fenzu();
