@@ -1,48 +1,28 @@
 var pageSize = 20;
 
-var homeworkStore = Ext.create('homework.store.HomeworkStore');
+var finaltestStore = Ext.create('finalacore.store.FinalTestStore');
 
-Ext.define('homework.view.HomeworkGrid', {
+Ext.define('finaltest.view.FinalTestGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.homeworkGrid',
+	alias : 'widget.finaltestGrid',
 	title : 'Java EE 课程-学生列表',
-	store : homeworkStore,
-	columns : [ {
-		text : 'ID',
-		width : 50,
-		sortable : true,
-		dataIndex : 'id'
-	}, {
+	store : finaltestStore,
+	columns : [  {
 		text : "学号",
 		width : 120,
 		sortable : true,
-		dataIndex : 'code'
+		dataIndex : 'sno'
 	}, {
 		text : "姓名",
 		width : 80,
 		sortable : true,
-		dataIndex : 'name'
+		dataIndex : 'sname'
 	}, {
-		text : "性别",
+		text : "成绩",
 		width : 80,
 		sortable : true,
-		dataIndex : 'sex'
+		dataIndex : 'sscore'
 	}, {
-		text : " 专业",
-		width : 80,
-		sortable : true,
-		dataIndex : 'major'
-	}, {
-		text : "年级",
-		width : 80,
-		sortable : true,
-		dataIndex : 'grade'
-	}, {
-		text : "班级",
-		width : 80,
-		sortable : true,
-		dataIndex : 'address'
-	},  {
 		text : "添加时间",
 		width : 150,
 		dataIndex : 'dateCreated',
@@ -63,7 +43,7 @@ Ext.define('homework.view.HomeworkGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : homeworkStore,
+		store : finaltestStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

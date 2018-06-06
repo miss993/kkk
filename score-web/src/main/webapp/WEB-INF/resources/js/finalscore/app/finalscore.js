@@ -1,40 +1,18 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('homework.HomeworkModel', {
+Ext.define('finalscore.FinalTestModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
-						name : 'id',
+						name : 'sname',
+						type : 'string',
+						sortable : true
+					}, {
+						name : 'sno',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'code',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'name',
-						type : 'string',
-						sortable : true
-					},{
-						name : 'sex',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'grade',
-						type : 'string',
-						sortable : true
-					}, {
-						name : 'address',
-						type : 'string',
-						sortable : true
-					},{
-						name : 'dateCreated',
-						type : 'date',
-						dateFormat : 'time',
-						sortable : true
-					}, {
-						name : 'dateModified',
-						type : 'date',
-						dateFormat : 'time',
+						name : 'sfinalscore',
+						type : 'int',
 						sortable : true
 					}]
 		});
@@ -44,7 +22,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'homework.HomeworkModel',
+			model : 'finaltest.FinalTesttModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -85,7 +63,7 @@ var textFieldEditor = {
 	maxText : '最多输入{0}个字符！'
 }
 
-var sexFieldEditor = {
+var genderFieldEditor = {
 	xtype : 'combo',
 	triggerAction : 'all',
 	forceSelection : true,
@@ -116,8 +94,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var homeworkGrid = new Ext.grid.GridPanel({
-			id : 'homeworkGrid',
+var studentGrid = new Ext.grid.GridPanel({
+			id : 'finaltestGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -125,48 +103,34 @@ var homeworkGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '学生基本信息列表',
+			title : 'javaee期末测试',
 			columns : [{
-						text : 'ID',
-						width : 50,
-						sortable : true,
-						dataIndex : 'id'
-					}, {
+				text : "姓名",
+				width : 80,
+				sortable : true,
+				dataIndex : 'sname',
+				editor : textFieldEditor,
+				field : {
+					xtype : 'textfield'
+				}
+			}, {
 						text : "学号",
 						width : 120,
 						sortable : true,
-						dataIndex : 'code',
+						dataIndex : 'sno',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
-					}, {
-						text : "姓名",
-						width : 80,
-						sortable : true,
-						dataIndex : 'name',
-						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
-					}, {
-						text : "性别",
-						width : 50,
-						sortable : true,
-						dataIndex : 'sex',
-						editor : sexFieldEditor
-					}, {
-						text : "年级",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'grade'
 					},  {
-						text : "班级",
-						width : 80,
+						text : "成绩",
+						width : 120,
 						sortable : true,
+						dataIndex : 'sscore',
 						editor : textFieldEditor,
-						dataIndex : 'address'
+						field : {
+							xtype : 'textfield'
+						}
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -206,9 +170,9 @@ var homeworkGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-homeworkGrid.getSelectionModel().on('selectionchange',
+studentGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			homeworkGrid.down('#delete').setDisabled(selections.length === 0);
+			studentGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -221,13 +185,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	homeworkForm.getForm().reset();
+	studentForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var homeworkForm = new Ext.form.FormPanel({
+var studentForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -243,10 +207,6 @@ var homeworkForm = new Ext.form.FormPanel({
 						fieldLabel : "姓名",
 						xtype : 'textfield',
 						name : 'name'
-					}, {
-						fieldLabel : "性别",
-						xtype : 'textfield',
-						name : 'sex'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -266,7 +226,7 @@ Ext.application({
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [homeworkForm, homeworkGrid]
+							items : [studentForm, studentGrid]
 						});
 			}
 		});
