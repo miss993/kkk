@@ -9,7 +9,7 @@ Ext.define('finaltest.controller.FinalTestController', {
 			'finaltestGrid' : {
 				itemdblclick : this.editFinalTest
 			},
-			'studentEdit button[action=save]' : {
+			'finaltestEdit button[action=save]' : {
 				click : this.updateFinalTest
 			}
 		});
