@@ -6,13 +6,20 @@ import javax.persistence.Table;
 
 import edu.zut.cs.score.base.domain.BaseEntity;
 
+/**
+ * 
+ * @author Administrator
+ *
+ */
 @Entity
 @Table(name = "T_FINALHOMEWORK")
 public class Homework extends BaseEntity{
 	private static final long serialVersionUID = 4475744750767977852L;
 	
 	
-
+/**
+ * 
+ */
 	@Column
 	String name;
 
