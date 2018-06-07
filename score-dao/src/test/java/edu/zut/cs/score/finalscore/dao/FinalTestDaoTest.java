@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 
  * @author wangyudong
- *
+ *dao包测试
  */
 
 public class FinalTestDaoTest extends GenericDaoTestCase<Long, FinalTest, FinalTestDao>{
