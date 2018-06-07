@@ -25,5 +25,5 @@ Ext.define('homework.controller.HomeworkController', {
 		values = form.getValues();
 		record.set(values);
 		win.close();
-	}
+	} 
 });

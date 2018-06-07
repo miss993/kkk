@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import edu.zut.cs.score.base.web.spring.controller.GenericController;
 import edu.zut.cs.score.finalhomework.domain.Homework;
@@ -17,6 +18,7 @@ public class HomeworkController extends GenericController<Homework, Long, Homewo
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
 	public String index() {
+		System.out.println("-----------?");
 		String result = "/homework/index";
 		return result;
 	}
@@ -25,5 +27,14 @@ public class HomeworkController extends GenericController<Homework, Long, Homewo
 	public void setHomeworkManager(HomeworkManager homeworkManager) {
 		this.homeworkManager = homeworkManager;
 		this.manager = this.homeworkManager;
+	}
+	
+	@RequestMapping(value=".json")
+	@ResponseBody
+	public Homework show() {
+		Homework h = new Homework();
+		h.setName("12222");
+		return h;
+		
 	}
 }
