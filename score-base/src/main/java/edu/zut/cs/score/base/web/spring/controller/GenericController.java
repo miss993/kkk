@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -29,7 +30,7 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 	protected int pageNumber = 0;
 	protected int pageSize = 20;
 
-	protected Pageable pageable = PageRequest.of(pageNumber, pageSize, new Sort(Direction.ASC, "id"));
+	protected Pageable pageable;
 
 	/**
 	 * 
@@ -59,22 +60,36 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 	}
 
 	/**
-	 * 
-	 * @param pageNumber
-	 * @param pageSize
+	 * 根据输入，返回分页结果中的当前页，包括当前页信息和其中的实体对象集合
+	 * @param request
+	 * @param response
 	 * @return
 	 */
-	@RequestMapping(value = "/page/", method = RequestMethod.GET, produces = "application/json")
+//	@RequestMapping(value = "/page/", method = RequestMethod.GET, produces = "application/json")
+//	@ResponseBody
+//	public Page<T> get(@RequestParam("pageNumber") String pageNumber, @RequestParam("pageSize") String pageSize) {
+//		this.pageNumber = Integer.valueOf(pageNumber);
+//		this.pageSize = Integer.valueOf(pageSize);
+//		this.pageable = PageRequest.of(this.pageNumber, this.pageSize, new Sort(Direction.ASC, "id"));
+//		this.page = this.manager.findAll(this.pageable);
+//		logger.info(this.page);
+//		return this.page;
+//	}
+	@RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
-	public Page<T> get(@RequestParam("pageNumber") String pageNumber, @RequestParam("pageSize") String pageSize) {
-		this.pageNumber = Integer.valueOf(pageNumber);
-		this.pageSize = Integer.valueOf(pageSize);
+	public Page<T> get(@RequestParam(name = "page", defaultValue = "0") String pageNumber,
+			@RequestParam(name = "limit", defaultValue = "20") String pageSize) {
+		if (StringUtils.isNotBlank(pageNumber)) {
+			this.pageNumber = Integer.valueOf(pageNumber) - 1;
+		}
+		if (StringUtils.isNotBlank(pageSize)) {
+			this.pageSize = Integer.valueOf(pageSize);
+		}
 		this.pageable = PageRequest.of(this.pageNumber, this.pageSize, new Sort(Direction.ASC, "id"));
 		this.page = this.manager.findAll(this.pageable);
 		logger.info(this.page);
 		return this.page;
 	}
-
 	/**
 	 * 
 	 * @param id
