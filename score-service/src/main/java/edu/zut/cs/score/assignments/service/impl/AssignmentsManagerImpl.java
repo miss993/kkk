@@ -8,7 +8,7 @@ import org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers;
 import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 import org.springframework.stereotype.Component;
 
-import edu.zut.cs.score.assignments.domain.Assigenments;
+import edu.zut.cs.score.assignments.domain.Assignments;
 import edu.zut.cs.score.assignments.service.AssignmentsManager;
 import edu.zut.cs.score.base.service.impl.GenericManagerImpl;
 
@@ -18,29 +18,29 @@ import edu.zut.cs.score.base.service.impl.GenericManagerImpl;
  *
  */
 @Component
-public class AssignmentsManagerImpl extends GenericManagerImpl<Assigenments,Long> implements AssignmentsManager {
+public class AssignmentsManagerImpl extends GenericManagerImpl<Assignments,Long> implements AssignmentsManager {
 
 	@Override
-	public List<Assigenments> findByname(String name) {
+	public List<Assignments> findByname(String name) {
 		// TODO Auto-generated method stub
-		Assigenments queryObject=new Assigenments();
+		Assignments queryObject=new Assignments();
 		queryObject.setName(name);
 		ExampleMatcher matcher=ExampleMatcher.matching().withMatcher("name",GenericPropertyMatchers.startsWith()).withIgnorePaths("dateCreated","dateModified");
-		Example<Assigenments> ex=Example.of(queryObject,matcher);
-		List<Assigenments> result=dao.findAll(ex);
+		Example<Assignments> ex=Example.of(queryObject,matcher);
+		List<Assignments> result=dao.findAll(ex);
 		return result;
 	}
 
 	@Override
-	public List<Assigenments> findBystuid(String stuid) {
+	public List<Assignments> findBystuid(String stuid) {
 		// TODO Auto-generated method stub
-		Assigenments queryObject=new Assigenments();
+		Assignments queryObject=new Assignments();
 		queryObject.setDateCreated(null);
 		queryObject.setDateModified(null);
 		queryObject.setStuid(stuid);
 		ExampleMatcher matcher=ExampleMatcher.matching().withStringMatcher(StringMatcher.CONTAINING).withIgnoreCase(true).withMatcher(stuid, GenericPropertyMatchers.startsWith());
-		Example<Assigenments> ex=Example.of(queryObject,matcher);
-		List<Assigenments> result=dao.findAll(ex);
+		Example<Assignments> ex=Example.of(queryObject,matcher);
+		List<Assignments> result=dao.findAll(ex);
 		return result;
 	}
 

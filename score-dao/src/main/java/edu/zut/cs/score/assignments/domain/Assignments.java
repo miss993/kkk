@@ -11,8 +11,8 @@ import edu.zut.cs.score.base.domain.BaseEntity;
  *
  */
 @Entity
-@Table(name = "T_Assigenments")
-public class Assigenments  extends BaseEntity{
+@Table(name = "T_Assignments")
+public class Assignments  extends BaseEntity{
 	private static final long serialVersionUID = 4475744750767977852L;
 
 	@Column
