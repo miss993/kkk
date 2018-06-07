@@ -2,12 +2,14 @@ package edu.zut.cs.score.assignments.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers;
 import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 import org.springframework.stereotype.Component;
 
+import edu.zut.cs.score.assignments.dao.AssignmentsDao;
 import edu.zut.cs.score.assignments.domain.Assignments;
 import edu.zut.cs.score.assignments.service.AssignmentsManager;
 import edu.zut.cs.score.base.service.impl.GenericManagerImpl;
@@ -20,6 +22,7 @@ import edu.zut.cs.score.base.service.impl.GenericManagerImpl;
 @Component
 public class AssignmentsManagerImpl extends GenericManagerImpl<Assignments,Long> implements AssignmentsManager {
 
+	AssignmentsDao assignmentsDao;
 	@Override
 	public List<Assignments> findByname(String name) {
 		// TODO Auto-generated method stub
@@ -43,5 +46,12 @@ public class AssignmentsManagerImpl extends GenericManagerImpl<Assignments,Long>
 		List<Assignments> result=dao.findAll(ex);
 		return result;
 	}
+	
+	@Autowired
+	public void setAssignmentsManager(AssignmentsDao assignmentsDao) {
+		this.assignmentsDao = assignmentsDao;
+		this.dao = this.assignmentsDao;
+	}
+	
 
 }

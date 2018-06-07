@@ -10,7 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.score.assignments.domain.Assignments;
 import edu.zut.cs.score.base.service.GenericManagerTestCase;
-
+/**
+ * 
+ * @author zhoutong
+ *
+ */
 public class AssignmentsManagerTest extends GenericManagerTestCase<Long,Assignments,AssignmentsManager>{
 	
 	AssignmentsManager assignmentsManager;
@@ -26,8 +30,8 @@ public class AssignmentsManagerTest extends GenericManagerTestCase<Long,Assignme
 	@Before
 	public void setUp() throws Exception{
 		Assignments assignments = new Assignments();
-		assignments.setName("张三");
-		assignments.setStuid("201508030328");
+		assignments.setName("周周");
+		assignments.setStuid("201508030300");
 		assignments.setScore1("99");
 		assignments.setScore2("98");
 		assignments.setScore3("97");
@@ -37,10 +41,10 @@ public class AssignmentsManagerTest extends GenericManagerTestCase<Long,Assignme
 	}
 	@Test
 	public void testFindByname() {
-		List<Assignments> result = this.assignmentsManager.findByname("张");
+		List<Assignments> result = this.assignmentsManager.findByname("周");
 		assertNotNull(result);
 		assertEquals(1,result.size());
-		assertEquals("张三",result.get(0).getName());
+		assertEquals("周周",result.get(0).getName());
 	}
 
 	@Test
