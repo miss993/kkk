@@ -32,8 +32,6 @@ public class Pswork  extends BaseEntity{
 	@Column
 	String score5;
 	
-	@Column
-	String scorezong;
 
 	public String getName() {
 		return name;
@@ -89,14 +87,6 @@ public class Pswork  extends BaseEntity{
 
 	public void setScore5(String score5) {
 		this.score5 = score5;
-	}
-
-	public String getScorezong() {
-		return scorezong;
-	}
-
-	public void setScorezong(String scorezong) {
-		this.scorezong = scorezong;
 	}
 	
 	
