@@ -11,13 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.score.assignments.domain.Assignments;
 import edu.zut.cs.score.base.service.GenericManagerTestCase;
 
-public class AssignmentsManagerTest extends GenericManagerTestCase<Long,Assignments,AssignmentsManager>
-{
+public class AssignmentsManagerTest extends GenericManagerTestCase<Long,Assignments,AssignmentsManager>{
+	
 	AssignmentsManager assignmentsManager;
 	
 	public AssignmentsManagerTest() {
 		super(Assignments.class);
-		// TODO Auto-generated constructor stub
 	}
 	@Autowired
 	public void setAssignmentsManager(AssignmentsManager assignmentsManager) {
