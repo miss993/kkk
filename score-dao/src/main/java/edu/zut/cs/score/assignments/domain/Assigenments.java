@@ -5,10 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import edu.zut.cs.score.base.domain.BaseEntity;
-
+/**
+ * 
+ * @author zhoutong
+ *
+ */
 @Entity
-@Table(name = "T_Pswork")
-public class Pswork  extends BaseEntity{
+@Table(name = "T_Assigenments")
+public class Assigenments  extends BaseEntity{
 	private static final long serialVersionUID = 4475744750767977852L;
 
 	@Column
