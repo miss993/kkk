@@ -1,12 +1,18 @@
 package edu.zut.cs.score.finalscore.dao;
 
 import edu.zut.cs.score.finalscore.domain.FinalTest;
+
 import edu.zut.cs.score.base.dao.GenericDaoTestCase;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
+/**
+ * 
+ * @author wangyudong
+ *
+ */
 
 public class FinalTestDaoTest extends GenericDaoTestCase<Long, FinalTest, FinalTestDao>{
 

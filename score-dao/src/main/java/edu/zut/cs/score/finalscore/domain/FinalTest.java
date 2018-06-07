@@ -6,7 +6,11 @@ import javax.persistence.Table;
 
 import edu.zut.cs.score.base.domain.BaseEntity;
 
-
+/**
+ * 
+ * @author wangyudong
+ *
+ */
 @Entity
 @Table(name = "T_FINALSCORE")
 public class FinalTest extends BaseEntity{

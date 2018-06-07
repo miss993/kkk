@@ -13,7 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.score.base.service.GenericManagerTestCase;
 import edu.zut.cs.score.finalscore.domain.FinalTest;
 import edu.zut.cs.score.finalscore.service.FinalTestManager;
-
+/**
+ * 
+ * @author wangyudong
+ *
+ */
 public class FinalTestManagerTest extends GenericManagerTestCase<Long, FinalTest, FinalTestManager>{
 
 	

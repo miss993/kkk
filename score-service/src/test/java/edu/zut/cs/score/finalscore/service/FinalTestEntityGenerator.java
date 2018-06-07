@@ -18,7 +18,11 @@ import edu.zut.cs.score.finalscore.service.FinalTestManagerTest;
 import edu.zut.cs.score.finalscore.domain.FinalTest;
 import edu.zut.cs.score.finalscore.service.FinalTestManager;
 import edu.zut.cs.score.base.service.GenericGenerator;
-
+/**
+ * 
+ * @author wangyudong
+ *
+ */
 public class FinalTestEntityGenerator extends GenericGenerator{
 
 	List<FinalTest> finaltestList;
