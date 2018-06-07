@@ -7,19 +7,19 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.score.assignments.domain.Pswork;
+import edu.zut.cs.score.assignments.domain.Assigenments;
 import edu.zut.cs.score.base.dao.GenericDaoTestCase;
 
-public class PsworkDaoTest extends GenericDaoTestCase<Long, Pswork,PsworkDao> {
-	private static final Logger logger = LogManager.getLogger(PsworkDao.class.getName());
+public class AssigenmentsDaoTest extends GenericDaoTestCase<Long, Assigenments,AssigenmentsDao> {
+	private static final Logger logger = LogManager.getLogger(AssigenmentsDao.class.getName());
 
 	@Autowired
-	PsworkDao psworkDao;
+	AssigenmentsDao assigenmentsDao;
 
 	@Test
 	public void testFindAll() {
 
-		List<Pswork> result = this.psworkDao.findAll();
+		List<Assigenments> result = this.assigenmentsDao.findAll();
 		if (logger.isInfoEnabled()) {
 			logger.info("testFindAll() - List<Pswork> result={}", result); //$NON-NLS-1$
 		}

@@ -1,4 +1,4 @@
-Ext.define('finalacore.view.FinalTestEdit', {
+Ext.define('finalscore.view.FinalTestEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.finaltestEdit',
 	title : '编辑学生信息',

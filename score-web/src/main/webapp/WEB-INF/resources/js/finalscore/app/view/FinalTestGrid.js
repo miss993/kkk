@@ -1,8 +1,8 @@
 var pageSize = 20;
 
-var finaltestStore = Ext.create('finalacore.store.FinalTestStore');
+var finaltestStore = Ext.create('finalscore.store.FinalTestStore');
 
-Ext.define('finaltest.view.FinalTestGrid', {
+Ext.define('finalscore.view.FinalTestGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.finaltestGrid',
 	title : 'Java EE 课程-学生列表',

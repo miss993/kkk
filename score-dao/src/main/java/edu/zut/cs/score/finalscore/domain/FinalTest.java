@@ -6,7 +6,12 @@ import javax.persistence.Table;
 
 import edu.zut.cs.score.base.domain.BaseEntity;
 
-
+/**
+ * 
+ * @author wangyudong
+ *表名：T_FINALSCORE
+ *属性：姓名，学号，成绩
+ */
 @Entity
 @Table(name = "T_FINALSCORE")
 public class FinalTest extends BaseEntity{

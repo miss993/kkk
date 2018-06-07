@@ -5,7 +5,7 @@ Ext.define('finalscore.store.FinalTestStore', {
 	alias : 'widget.finaltestStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'finaltest.model.FinalTestModel',
+	model : 'finalscore.model.FinalTestModel',
 	proxy : {
 		url : server_context + '/finalscore/finaltest/.json',
 		type : 'ajax',

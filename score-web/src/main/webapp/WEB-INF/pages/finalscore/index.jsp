@@ -23,7 +23,7 @@
 	var server_context = basePath;
 </script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/resources/js/student/app.js"></script>
+	src="${pageContext.request.contextPath}/resources/js/finalscore/app.js"></script>
 <body>
 </body>
 </html>
