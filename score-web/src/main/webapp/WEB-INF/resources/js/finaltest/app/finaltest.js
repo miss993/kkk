@@ -1,6 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('finalscore.FinalTestModel', {
+Ext.define('finaltest.FinalTestModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'sname',
@@ -226,7 +226,7 @@ Ext.application({
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [studentForm, studentGrid]
+							items : [finaltestForm, finaltestGrid]
 						});
 			}
 		});

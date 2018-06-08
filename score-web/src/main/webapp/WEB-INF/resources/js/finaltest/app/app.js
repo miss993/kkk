@@ -3,7 +3,7 @@ Ext.Loader.setConfig({
 });
 Ext.application({
 	name : 'finaltest',
-	appFolder : server_context + '/resources/js/finalscore/app',
+	appFolder : server_context + '/resources/js/finaltest/app',
 	controllers : [ 'FinalTestController' ],
 	launch : function() {
 		Ext.create('Ext.container.Viewport', {

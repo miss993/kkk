@@ -1,4 +1,4 @@
-Ext.define('finalscore.controller.FinalTestController', {
+Ext.define('finaltest.controller.FinalTestController', {
 	extend : 'Ext.app.Controller',
 	alias : 'widget.finaltestController',
 	stores : [ 'FinalTestStore' ],
