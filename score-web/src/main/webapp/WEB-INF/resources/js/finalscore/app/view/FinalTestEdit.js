@@ -22,10 +22,6 @@ Ext.define('finalscore.view.FinalTestEdit', {
 				xtype : 'textfield',
 				name : 'sname',
 				fieldLabel : '成绩'
-			}, {
-				xtype : 'textfield',
-				name : 'sscore',
-				fieldLabel : '专业'
 			}]
 		} ];
 		this.buttons = [ {

@@ -7,11 +7,11 @@ Ext.define('finalscore.store.FinalTestStore', {
 	autoSync : true,// 需要同步
 	model : 'finalscore.model.FinalTestModel',
 	proxy : {
-		url : server_context + '/finalscore/finaltest/.json',
+		url : server_context + '/finalscore/finalscore/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/finalscore/finaltest/.json',
-			update : server_context + '/finalscore/finaltest/.json'
+			read : server_context + '/finalscore/finalscore/.json',
+			update : server_context + '/finalscore/finalscore/.json'
 		},
 		reader : {
 			type : 'json',
