@@ -23,6 +23,9 @@ import edu.zut.cs.score.base.service.impl.GenericManagerImpl;
 public class AssignmentsManagerImpl extends GenericManagerImpl<Assignments,Long> implements AssignmentsManager {
 
 	AssignmentsDao assignmentsDao;
+	/**
+	 * 根据name查找的实现
+	 */
 	@Override
 	public List<Assignments> findByname(String name) {
 		// TODO Auto-generated method stub
@@ -33,7 +36,9 @@ public class AssignmentsManagerImpl extends GenericManagerImpl<Assignments,Long>
 		List<Assignments> result=dao.findAll(ex);
 		return result;
 	}
-
+	/**
+	 * 根据stuid查找的实现
+	 */
 	@Override
 	public List<Assignments> findBystuid(String stuid) {
 		// TODO Auto-generated method stub

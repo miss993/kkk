@@ -17,14 +17,26 @@ import edu.zut.cs.score.assignments.domain.Assignments;
 import edu.zut.cs.score.base.service.GenericGenerator;
 import edu.zut.cs.score.finalhomework.domain.Homework;
 
+/**
+ * 
+ * @author zhoutong
+ *
+ */
 public class AssignmentsEntityGenerator extends GenericGenerator{
 	List<Assignments> assignmentsList;
 	AssignmentsManager assignmentsmanager;
-	
+	/**
+	 * 
+	 * @param assignmentsmanager
+	 */
 	@Autowired
 	public void setAssignmentManager(AssignmentsManager assignmentsmanager) {
 		this.assignmentsmanager = assignmentsmanager;
 	}
+	/**
+	 * 
+	 * @throws Exception
+	 */
 	@Before
 	public void setUp() throws Exception{
 		this.assignmentsList = new ArrayList<Assignments>();
@@ -59,6 +71,9 @@ public class AssignmentsEntityGenerator extends GenericGenerator{
 			this.assignmentsList.add(s);
 		}
 	}
+	/**
+	 * Test测试
+	 */
 	@Test
 	public void test() {
 		this.assignmentsmanager.save(this.assignmentsList);

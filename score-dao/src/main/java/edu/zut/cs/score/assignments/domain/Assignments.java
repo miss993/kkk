@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 import edu.zut.cs.score.base.domain.BaseEntity;
 /**
- * 
+ * Assignments的数据库设计与操作
  * @author zhoutong
  *
  */

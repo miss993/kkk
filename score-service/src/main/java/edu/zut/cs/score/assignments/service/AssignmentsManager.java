@@ -11,8 +11,18 @@ import edu.zut.cs.score.base.service.GenericManager;
  */
 public interface AssignmentsManager extends GenericManager<Assignments,Long>
 {
+	/**
+	 * 根据name查找
+	 * @param name
+	 * @return
+	 */
 	List<Assignments> findByname(String name);
 	
+	/**
+	 * 根据stuid查找
+	 * @param stuid
+	 * @return
+	 */
 	List<Assignments> findBystuid(String stuid);
 	
 	

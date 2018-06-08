@@ -22,11 +22,18 @@ public class AssignmentsManagerTest extends GenericManagerTestCase<Long,Assignme
 	public AssignmentsManagerTest() {
 		super(Assignments.class);
 	}
+	/**
+	 * 
+	 * @param assignmentsManager
+	 */
 	@Autowired
 	public void setAssignmentsManager(AssignmentsManager assignmentsManager) {
 		this.assignmentsManager = assignmentsManager;
 		this.manager = this.assignmentsManager;
 	}
+	/**
+	 * 
+	 */
 	@Before
 	public void setUp() throws Exception{
 		Assignments assignments = new Assignments();
@@ -39,6 +46,9 @@ public class AssignmentsManagerTest extends GenericManagerTestCase<Long,Assignme
 		assignments.setScore5("95");
 		this.entity = this.manager.save(assignments);
 	}
+	/**
+	 * Test测试
+	 */
 	@Test
 	public void testFindByname() {
 		List<Assignments> result = this.assignmentsManager.findByname("周");
@@ -46,7 +56,9 @@ public class AssignmentsManagerTest extends GenericManagerTestCase<Long,Assignme
 		assertEquals(1,result.size());
 		assertEquals("周周",result.get(0).getName());
 	}
-
+	/**
+	 * Test测试
+	 */
 	@Test
 	public void testFindBystuid() {
 		String stuid = this.entity.getStuid();
