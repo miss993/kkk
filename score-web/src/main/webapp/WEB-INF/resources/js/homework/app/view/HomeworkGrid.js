@@ -5,7 +5,7 @@ var homeworkStore = Ext.create('homework.store.HomeworkStore');
 Ext.define('homework.view.HomeworkGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.homeworkGrid',
-	title : 'Java EE 课程-学生列表',
+	title : 'Java EE 课程-期末大作業',
 	store : homeworkStore,
 	columns : [ {
 		text : 'ID',
@@ -14,12 +14,12 @@ Ext.define('homework.view.HomeworkGrid', {
 		dataIndex : 'id'
 	}, {
 		text : "学号",
-		width : 120,
+		width : 160,
 		sortable : true,
 		dataIndex : 'code'
 	}, {
 		text : "姓名",
-		width : 80,
+		width : 120,
 		sortable : true,
 		dataIndex : 'name'
 	}, {
@@ -27,39 +27,27 @@ Ext.define('homework.view.HomeworkGrid', {
 		width : 80,
 		sortable : true,
 		dataIndex : 'sex'
-	}, {
-		text : " 专业",
-		width : 80,
-		sortable : true,
-		dataIndex : 'major'
-	}, {
+	},{
 		text : "年级",
-		width : 80,
+		width : 120,
 		sortable : true,
 		dataIndex : 'grade'
 	}, {
+		text : " 专业",
+		width : 120,
+		sortable : true,
+		dataIndex : 'major'
+	},  {
 		text : "班级",
-		width : 80,
+		width : 120,
 		sortable : true,
 		dataIndex : 'address'
 	} ,{
 		text : "成绩",
-		width : 80,
+		width : 120,
 		sortable : true,
 		dataIndex : 'mark'
-	},  {
-		text : "添加时间",
-		width : 150,
-		dataIndex : 'dateCreated',
-		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-		sortable : true
-	}, {
-		text : "修改时间",
-		width : 150,
-		dataIndex : 'dateModified',
-		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-		sortable : true
-	} ],
+	}],
 	viewConfig : {
 		columnsText : '列',
 		sortAscText : '升序',

@@ -6,11 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.score.base.dao.GenericDaoTestCase;
 import edu.zut.cs.score.finalhomework.domain.Homework;
-
+/**
+ * HomeworkDao的测试,继承了GenericDaoTestCase
+ * @author 柴晓印
+ *
+ */
 public class HomeworkDaoTest extends GenericDaoTestCase<Long, Homework, HomeworkDao>{
 	@Autowired
 	HomeworkDao homeworkDao;
-	
+	/**
+	 * 测试方法
+	 */
 	@Test
 	public void testFindAll() {
 		

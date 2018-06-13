@@ -13,12 +13,20 @@ import edu.zut.cs.score.base.service.impl.GenericManagerImpl;
 import edu.zut.cs.score.finalhomework.dao.HomeworkDao;
 import edu.zut.cs.score.finalhomework.domain.Homework;
 import edu.zut.cs.score.finalhomework.service.HomeworkManager;
-
+/**
+ * HomeworkManagerImpl继承了基础方法GenericManagerImpl
+ * 并且实现了接口HomeworkManager
+ * @author 柴晓印
+ *
+ */
 @Component
 public class HomeworkManagerImpl extends GenericManagerImpl<Homework, Long> implements HomeworkManager{
 
 	HomeworkDao homeworkDao;
-	
+	/**
+	 *	重写 HomeworkManager中的方法，用code找数据
+	 *
+	 */
 	@Override
 	public List<Homework> findByCode(String code) {
 		// 创建查询条件数据对象

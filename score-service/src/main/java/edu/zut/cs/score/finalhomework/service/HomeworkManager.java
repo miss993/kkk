@@ -4,8 +4,8 @@ import java.util.List;
 import edu.zut.cs.score.base.service.GenericManager;
 import edu.zut.cs.score.finalhomework.domain.Homework;
 /**
- * 
- * @author chaixiaoyin
+ * 接口HomeworkManager继承了基础GenericManager
+ * @author 柴晓印
  *
  */
 

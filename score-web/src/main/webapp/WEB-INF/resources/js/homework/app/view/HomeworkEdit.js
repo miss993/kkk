@@ -24,12 +24,12 @@ Ext.define('homework.view.HomeworkEdit', {
 				fieldLabel : '性别'
 			}, {
 				xtype : 'textfield',
-				name : 'major',
-				fieldLabel : '专业'
-			}, {
-				xtype : 'textfield',
 				name : 'grade',
 				fieldLabel : '年级'
+			},{
+				xtype : 'textfield',
+				name : 'major',
+				fieldLabel : '专业'
 			}, {
 				xtype : 'textfield',
 				name : 'address',

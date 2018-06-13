@@ -11,7 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.score.base.service.GenericManagerTestCase;
 import edu.zut.cs.score.finalhomework.domain.Homework;
-
+/**
+ * HomeworkManager的测试
+ * @author 柴晓印
+ *
+ */
 public class HomeworkManagerTest extends GenericManagerTestCase<Long, Homework, HomeworkManager>{
 
 	HomeworkManager homeworkManager;
@@ -19,6 +23,7 @@ public class HomeworkManagerTest extends GenericManagerTestCase<Long, Homework, 
 	public HomeworkManagerTest() {
 		super(Homework.class);
 	}
+	
 	@Autowired
 	public void setHomeworkManager(HomeworkManager homeworkManager) {
 		this.homeworkManager = homeworkManager;
@@ -41,6 +46,9 @@ public class HomeworkManagerTest extends GenericManagerTestCase<Long, Homework, 
 		assertEquals(1, result.size());
 		assertEquals("张三", result.get(0).getName());
 	}
+	/**
+	 * 具体测试
+	 */
 	@Test
 	public void testFindByCode() {
 		String code = this.entity.getCode();

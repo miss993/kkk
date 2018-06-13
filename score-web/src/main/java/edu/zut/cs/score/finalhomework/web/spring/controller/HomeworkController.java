@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import edu.zut.cs.score.base.web.spring.controller.GenericController;
 import edu.zut.cs.score.finalhomework.domain.Homework;
 import edu.zut.cs.score.finalhomework.service.HomeworkManager;
-
+/**
+ * web控制器，跳转Index页面
+ * @author 柴晓印
+ *
+ */
 @Controller
 @RequestMapping("/finalhomework/homework")
 public class HomeworkController extends GenericController<Homework, Long, HomeworkManager>{
@@ -16,7 +20,6 @@ public class HomeworkController extends GenericController<Homework, Long, Homewo
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
 	public String index() {
-		System.out.println("-----------?");
 		String result = "/homework/index";
 		return result;
 	}

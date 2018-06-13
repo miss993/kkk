@@ -19,8 +19,8 @@ import edu.zut.cs.score.finalhomework.domain.Homework;
 import edu.zut.cs.score.finalhomework.domain.Sex;
 
 /**
- *  Entity Generator for finalhomework package.
- * @author chaxiaoyin
+ *  Entity Generator for finalhomework包
+ * @author 柴晓印
  *
  */
 public class HomeworkEntityGenerator extends GenericGenerator{
@@ -32,6 +32,10 @@ public class HomeworkEntityGenerator extends GenericGenerator{
 		public void setHomeworkManager(HomeworkManager homeworkManager) {
 			this.homeworkManager = homeworkManager;
 		}
+		/**
+		 * 设置数据读入文件和，数据录入数据库的具体实现
+		 * @throws Exception
+		 */
 		@Before
 		public void setUp() throws Exception {
 			this.homeworkList = new ArrayList<Homework>();
@@ -71,6 +75,9 @@ public class HomeworkEntityGenerator extends GenericGenerator{
 				this.homeworkList.add(s);
 			}
 		}
+		/**
+		 * 测试实现
+		 */
 		@Test
 		public void test() {
 			this.homeworkManager.save(this.homeworkList);

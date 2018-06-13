@@ -12,15 +12,14 @@
 </head>
 <body>
 
-	This is my main page!
-
-	<div id="app">
-		<el-button @click="visible = true">Button</el-button>
-		<el-dialog :visible.sync="visible" title="Hello world">
-		<p>Try Element</p>
-		</el-dialog>
-	</div>
-
+	<center><b><h1>JAVA EE课程-------score项目</h1></b></center><hr/>
+	<a href="">分组模块</a><p/>
+	<a href="">平时作业模块</a><p/>
+	<a href="">平时考勤模块</a><p/>
+	<a href="/score-web/finalhomework/homework/index.html" >期末大作业模块</a><p/>
+	<a href="/score-web/finalscore/finaltest/index.html">期末总成绩模块</a><p/>
+					
+	
 
 </body>
 <!-- import Vue before Element -->
