@@ -12,15 +12,15 @@ Ext.define('finaltest.view.FinalTestEdit', {
 			border : false,
 			items : [ {
 				xtype : 'textfield',
-				name : 'code',
+				name : 'sno',
 				fieldLabel : '学号'
 			}, {
 				xtype : 'textfield',
-				name : 'sno',
+				name : 'sname',
 				fieldLabel : '姓名'
 			}, {
 				xtype : 'textfield',
-				name : 'sname',
+				name : 'sscore',
 				fieldLabel : '成绩'
 			}]
 		} ];

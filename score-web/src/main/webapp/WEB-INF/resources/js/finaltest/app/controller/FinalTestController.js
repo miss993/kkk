@@ -14,11 +14,11 @@ Ext.define('finaltest.controller.FinalTestController', {
 			}
 		});
 	},
-	editStudent : function(grid, record) {
+	editFinalTest : function(grid, record) {
 		var view = Ext.widget('finaltestEdit');
 		view.down('form').loadRecord(record);
 	},
-	updateStudent : function(button) {
+	updateFinalTest : function(button) {
 		var win = button.up('window');
 		form = win.down('form');
 		record = form.getRecord();

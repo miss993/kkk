@@ -15,10 +15,6 @@ Ext.define('finaltest.FinalTestModel', {
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'grade',
-						type : 'string',
-						sortable : true
-					}, {
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -36,7 +32,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'student.StudentModel',
+			model : 'finaltest.FinalTestModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
