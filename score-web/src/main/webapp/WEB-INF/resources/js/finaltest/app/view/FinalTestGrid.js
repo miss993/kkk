@@ -5,7 +5,7 @@ var finaltestStore = Ext.create('finaltest.store.FinalTestStore');
 Ext.define('finaltest.view.FinalTestGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.finaltestGrid',
-	title : 'Java EE 课程-学生列表',
+	title : 'Java EE 课程成绩',
 	store : finaltestStore,
 	columns : [  {
 		text : "学号",

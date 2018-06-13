@@ -3,7 +3,7 @@ Ext.define('finaltest.model.FinalTestModel', {
 	alias : 'widget.finaltestModel',
 	fields : [ {
 		name : 'sno',
-		type : 'int',
+		type : 'string',
 		sortable : true
 	}, {
 		name : 'sname',
@@ -11,7 +11,17 @@ Ext.define('finaltest.model.FinalTestModel', {
 		sortable : true
 	}, {
 		name : 'sscore',
-		type : 'int',
+		type : 'string',
 		sortable : true
-	} ]
+	} , {
+		name : 'dateCreated',
+		type : 'date',
+		dateFormat : 'time',
+		sortable : true
+	}, {
+		name : 'dateModified',
+		type : 'date',
+		dateFormat : 'time',
+		sortable : true
+	}]
 });

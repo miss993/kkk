@@ -2,17 +2,31 @@ Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
 Ext.define('finaltest.FinalTestModel', {
 			extend : 'Ext.data.Model',
-			fields : [{
+			fields : [ {
+						name : 'sno',
+						type : 'string',
+						sortable : true
+					}, {
 						name : 'sname',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'sno',
-						type : 'int',
+						name : 'sscore',
+						type : 'string',
 						sortable : true
 					}, {
-						name : 'sfinalscore',
-						type : 'int',
+						name : 'grade',
+						type : 'string',
+						sortable : true
+					}, {
+						name : 'dateCreated',
+						type : 'date',
+						dateFormat : 'time',
+						sortable : true
+					}, {
+						name : 'dateModified',
+						type : 'date',
+						dateFormat : 'time',
 						sortable : true
 					}]
 		});
@@ -22,7 +36,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'finaltest.FinalTesttModel',
+			model : 'student.StudentModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -63,25 +77,7 @@ var textFieldEditor = {
 	maxText : '最多输入{0}个字符！'
 }
 
-var genderFieldEditor = {
-	xtype : 'combo',
-	triggerAction : 'all',
-	forceSelection : true,
-	displayField : 'label',
-	valueField : 'id',
-	mode : 'local',
-	store : {
-		xtype : 'jsonstore',
-		fields : ['id', 'label'],
-		data : [{
-					id : '男',
-					label : '男'
-				}, {
-					id : '女',
-					label : '女'
-				}]
-	}
-}
+
 var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			listeners : {
 				cancelEdit : function(rowEditing, context) {
@@ -103,17 +99,8 @@ var studentGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : 'javaee期末测试',
-			columns : [{
-				text : "姓名",
-				width : 80,
-				sortable : true,
-				dataIndex : 'sname',
-				editor : textFieldEditor,
-				field : {
-					xtype : 'textfield'
-				}
-			}, {
+			title : '学生基本信息列表',
+			columns : [ {
 						text : "学号",
 						width : 120,
 						sortable : true,
@@ -122,15 +109,21 @@ var studentGrid = new Ext.grid.GridPanel({
 						field : {
 							xtype : 'textfield'
 						}
-					},  {
-						text : "成绩",
-						width : 120,
+					}, {
+						text : "姓名",
+						width : 80,
 						sortable : true,
-						dataIndex : 'sscore',
+						dataIndex : 'sname',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
+					},  {
+						text : "成绩",
+						width : 80,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'sscore'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -202,11 +195,11 @@ var studentForm = new Ext.form.FormPanel({
 			items : [{
 						fieldLabel : "学号",
 						xtype : 'textfield',
-						name : 'code'
+						name : 'sno'
 					}, {
 						fieldLabel : "姓名",
 						xtype : 'textfield',
-						name : 'name'
+						name : 'sname'
 					}],
 			buttons : [{
 						xtype : 'button',
