@@ -59,10 +59,13 @@ public class HomeworkEntityGenerator extends GenericGenerator{
 							s.setName(value);
 						if (j == 6)
 							if (StringUtils.equalsIgnoreCase("男", value)) {
-								s.setSex(Sex.Male);
+								s.setSex(Sex.男);
 							} else if (StringUtils.equalsIgnoreCase("女", value)) {
-								s.setSex(Sex.Female);
+								s.setSex(Sex.女);
 							}
+						if (j == 7)
+							s.setMark(Integer.valueOf(value));
+						
 					}
 				}
 				this.homeworkList.add(s);

@@ -36,7 +36,17 @@ public class Homework extends BaseEntity{
 	String address;
 	@Column
 	String major;
+	@Column
+	Integer mark;
 	
+
+	public Integer getMark() {
+		return mark;
+	}
+
+	public void setMark(Integer mark) {
+		this.mark = mark;
+	}
 
 	public String getMajor() {
 		return major;

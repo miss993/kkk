@@ -27,6 +27,10 @@ Ext.define('homework.HomeworkModel', {
 						type : 'string',
 						sortable : true
 					},{
+						name : 'mark',
+						type : 'integer',
+						sortable : true
+					},{
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -168,6 +172,12 @@ var homeworkGrid = new Ext.grid.GridPanel({
 						editor : textFieldEditor,
 						dataIndex : 'address'
 					}, {
+						text : "成绩",
+						width : 80,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'mark'
+					},{
 						text : "添加时间",
 						width : 150,
 						dataIndex : 'dateCreated',

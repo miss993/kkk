@@ -42,6 +42,11 @@ Ext.define('homework.view.HomeworkGrid', {
 		width : 80,
 		sortable : true,
 		dataIndex : 'address'
+	} ,{
+		text : "成绩",
+		width : 80,
+		sortable : true,
+		dataIndex : 'mark'
 	},  {
 		text : "添加时间",
 		width : 150,
