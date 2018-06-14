@@ -1,4 +1,9 @@
 package edu.zut.cs.score.fenzu.service;
+/**
+ * 接口FenzuManager继承了基础GenericManager
+ * @author panshaoqian
+ */
+
 import java.util.List;
 import edu.zut.cs.score.fenzu.domain.Fenzu;
 

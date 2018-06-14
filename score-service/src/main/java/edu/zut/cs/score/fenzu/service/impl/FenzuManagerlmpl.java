@@ -1,5 +1,12 @@
 package edu.zut.cs.score.fenzu.service.impl;
+
+/**
+ * FenzuManagerImpl继承了基础方法GenericManagerImpl
+ * 并且实现了接口fenzuManager
+ * @author panshaoqian
+ */
 import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;

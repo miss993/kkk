@@ -1,4 +1,9 @@
 package edu.zut.cs.score.fenzu.dao;
+/**
+ *  FenzuDao的测试,继承了GenericDaoTestCase
+ *  @author panshaoqian
+ * 
+ */
 import java.util.List;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

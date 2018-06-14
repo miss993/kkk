@@ -1,5 +1,8 @@
 package edu.zut.cs.score.fenzu.domain;
-
+/**Fenzu实体类
+ * 定义了各个列名
+ * @author panshaoqian
+ */
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;

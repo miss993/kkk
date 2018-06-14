@@ -1,4 +1,8 @@
 package edu.zut.cs.score.fenzu.service;
+/**
+ * FenzuManager的测试
+ * @author panshaoqian
+ */
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

@@ -1,4 +1,8 @@
 package edu.zut.cs.score.fenzu.service;
+/**
+ * Entity Generator for fennzu
+ * @author panshaoqian
+ */
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +31,7 @@ public class FenzuEntityGenerator extends GenericGenerator {
    @Before
    public void setUp() throws Exception {
 	   this.fenzuList=new ArrayList<Fenzu>();
-	   InputStream input =FenzuManagerTest.class.getResourceAsStream("/homework_test.xlsx");
+	   InputStream input =FenzuManagerTest.class.getResourceAsStream("/fenzu.xlsx");
 	   @SuppressWarnings("resource")
 	   XSSFWorkbook wb = new XSSFWorkbook(input);
 	   XSSFSheet sheet = wb.getSheetAt(0);
@@ -39,21 +43,21 @@ public class FenzuEntityGenerator extends GenericGenerator {
 				if (cell != null) {
 					cell.setCellType(CellType.STRING);
 					String value = row.getCell(j).getStringCellValue().trim();
+					if (j == 0)
+						s.setName(value);
 					if (j == 1)
 						s.setStudentclass(value);
 					if (j == 2)
-						s.setStudentzhiwu(value);
-					if (j == 3)
 						s.setStudentdoing(value);
-					if (j == 4)
+					if (j == 3)
 						s.setStudentno(value);
 					if (j == 5)
-						s.setName(value);
-					if (j == 6)
+						s.setStudentzhiwu(value);
+					if (j == 4)
 						if (StringUtils.equalsIgnoreCase("男", value)) {
-							s.setStudentsex(Studentsex.Male);
+							s.setStudentsex(Studentsex.男);
 						} else if (StringUtils.equalsIgnoreCase("女", value)) {
-							s.setStudentsex(Studentsex.Female);
+							s.setStudentsex(Studentsex.女);
 						}
 				}
 			}
