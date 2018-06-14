@@ -20,7 +20,9 @@ public class AssigenmentsDaoTest extends GenericDaoTestCase<Long, Assignments,As
 
 	@Autowired
 	AssignmentsDao assignmentsDao;
-
+	/*
+	 * 测试成功时在数据库生成T_Assignments的表
+	 */
 	@Test
 	public void testFindAll() {
 

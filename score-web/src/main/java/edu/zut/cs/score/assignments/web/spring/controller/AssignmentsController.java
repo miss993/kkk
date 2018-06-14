@@ -12,6 +12,7 @@ import edu.zut.cs.score.base.web.spring.controller.GenericController;
  * 
  * @author zhoutong
  *
+ * index跳转
  */
 @Controller
 @RequestMapping("/assignments/assignment")

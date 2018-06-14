@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String extjsPath = "http://202.196.37.91:8080/ext-4.2.1.883/";
@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Java EE 课程学生</title>
+<title>五次作业成绩</title>
 </head>
 <link rel="stylesheet" type="text/css"
 	href="<%=extjsPath%>resources/css/ext-all-neptune.css">

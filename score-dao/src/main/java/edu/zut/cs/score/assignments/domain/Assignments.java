@@ -9,12 +9,16 @@ import edu.zut.cs.score.base.domain.BaseEntity;
  * Assignments的数据库设计与操作
  * @author zhoutong
  *
+ * 创建数据库，数据库名：T_Assignments
  */
 @Entity
 @Table(name = "T_Assignments")
 public class Assignments  extends BaseEntity{
 	private static final long serialVersionUID = 4475744750767977852L;
 
+	/*
+	 * 定义列名  姓名 name,学号 stuid,成绩1-5 score1-5
+	 */
 	@Column
 	String name;
 	
@@ -36,6 +40,9 @@ public class Assignments  extends BaseEntity{
 	@Column
 	String score5;
 	
+	/*
+	 * get和set实现
+	 */
 
 	public String getName() {
 		return name;

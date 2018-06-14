@@ -21,6 +21,8 @@ import edu.zut.cs.score.finalhomework.domain.Homework;
  * 
  * @author zhoutong
  *
+ * 从execl中读取学号姓名信息插入数据库测试
+ * 成功后会在数据库的T_Assignments表中生成
  */
 public class AssignmentsEntityGenerator extends GenericGenerator{
 	List<Assignments> assignmentsList;
