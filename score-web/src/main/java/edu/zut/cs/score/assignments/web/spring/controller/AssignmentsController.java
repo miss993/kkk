@@ -15,7 +15,7 @@ import edu.zut.cs.score.base.web.spring.controller.GenericController;
  * index跳转
  */
 @Controller
-@RequestMapping("/assignments/assignment")
+@RequestMapping("/assignments/assignments")
 public class AssignmentsController extends GenericController<Assignments,Long,AssignmentsManager>{
 	
 	AssignmentsManager assignmentsManager;

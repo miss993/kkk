@@ -14,7 +14,7 @@
 
 	<center><b><h1>JAVA EE课程-------score项目</h1></b></center><hr/>
 	<a href="/score-web/fenzu/fenzu/index.html">分组模块</a><p/>
-	<a href="">平时作业模块</a><p/>
+	<a href="/score-web/assignments/assignments/index.html">平时作业模块</a><p/>
 	<a href="/score-web/attendance/attendance/index.html">平时考勤模块</a><p/>
 	<a href="/score-web/finalhomework/homework/index.html" >期末大作业模块</a><p/>
 	<a href="/score-web/finalscore/finaltest/index.html">期末总成绩模块</a><p/>
