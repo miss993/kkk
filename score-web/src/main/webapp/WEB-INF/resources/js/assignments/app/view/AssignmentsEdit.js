@@ -1,4 +1,4 @@
-Ext.define('homework.view.HomeworkEdit', {
+Ext.define('assignments.view.AssignmentsEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.assignmentsEdit',
 	title : '编辑作业成绩',

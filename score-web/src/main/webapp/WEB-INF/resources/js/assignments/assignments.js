@@ -246,7 +246,7 @@ Ext.application({
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [homeworkForm, homeworkGrid]
+							items : [assignmentsForm, assignmentsGrid]
 						});
 			}
 		});

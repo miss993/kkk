@@ -51,7 +51,7 @@ Ext.define('assignments.view.AssignmentsGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : homeworkStore,
+		store : assignmentsStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',
