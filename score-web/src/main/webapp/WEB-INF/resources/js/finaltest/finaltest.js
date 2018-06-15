@@ -11,18 +11,16 @@ Ext.define('finaltest.FinalTestModel', {
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'sscore',
+						name : 'skaoqin',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'dateCreated',
-						type : 'date',
-						dateFormat : 'time',
+						name : 'spingshizuoye',
+						type : 'string',
 						sortable : true
 					}, {
-						name : 'dateModified',
-						type : 'date',
-						dateFormat : 'time',
+						name : 'sscore',
+						type : 'string',
 						sortable : true
 					}]
 		});
@@ -115,23 +113,23 @@ var studentGrid = new Ext.grid.GridPanel({
 							xtype : 'textfield'
 						}
 					},  {
-						text : "成绩",
+						text : "考勤成绩",
+						width : 80,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'skaoqin'
+					},  {
+						text : "作业成绩",
+						width : 80,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'spingshizuoye'
+					},  {
+						text : "期末成绩",
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
 						dataIndex : 'sscore'
-					}, {
-						text : "添加时间",
-						width : 150,
-						dataIndex : 'dateCreated',
-						renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-						sortable : true
-					}, {
-						text : "修改时间",
-						width : 150,
-						dataIndex : 'dateModified',
-						renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-						sortable : true
 					}],
 			viewConfig : {
 				columnsText : '列',

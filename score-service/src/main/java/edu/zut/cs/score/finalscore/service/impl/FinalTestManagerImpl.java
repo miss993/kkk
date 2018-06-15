@@ -56,8 +56,8 @@ public class FinalTestManagerImpl extends GenericManagerImpl<FinalTest, Long> im
 	}
 
 	@Autowired
-	public void setStudentDao(FinalTestDao studentDao) {
-		this.finaltestDao = studentDao;
+	public void setStudentDao(FinalTestDao finaltestDao) {
+		this.finaltestDao = finaltestDao;
 		this.dao = this.finaltestDao;
 	}
 }
