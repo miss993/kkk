@@ -9,7 +9,7 @@ Ext.define('fenzu.controller.FenzuController', {
 			'fenzuGrid' : {
 				itemdblclick : this.editFenzu
 			},
-			'FenzuEdit button[action=save]' : {
+			'fenzuEdit button[action=save]' : {
 				click : this.updateFenzu
 			}
 		});
