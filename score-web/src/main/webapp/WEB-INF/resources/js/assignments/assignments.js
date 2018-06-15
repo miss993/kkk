@@ -92,7 +92,7 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var homeworkGrid = new Ext.grid.GridPanel({
+var assignmentsGrid = new Ext.grid.GridPanel({
 			id : 'assignmentsGrid',
 			plugins : [rowEditing],
 			store : store,
@@ -190,9 +190,9 @@ var homeworkGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-homeworkGrid.getSelectionModel().on('selectionchange',
+assignmentsGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			homeworkGrid.down('#delete').setDisabled(selections.length === 0);
+	assignmentsGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -205,13 +205,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	homeworkForm.getForm().reset();
+	assignmentsForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var homeworkForm = new Ext.form.FormPanel({
+var assignmentsForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,

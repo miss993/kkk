@@ -1,6 +1,6 @@
 var pageSize = 20;
 
-var homeworkStore = Ext.create('assignments.store.AssignmentsStore');
+var assignmentsStore = Ext.create('assignments.store.AssignmentsStore');
 
 Ext.define('assignments.view.AssignmentsGrid', {
 	extend : 'Ext.grid.GridPanel',
