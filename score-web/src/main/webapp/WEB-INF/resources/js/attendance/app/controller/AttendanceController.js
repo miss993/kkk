@@ -6,7 +6,7 @@ Ext.define('attendance.controller.AttendanceController', {
 	views : [ 'AttendanceGrid', 'AttendanceEdit' ],
 	init : function() {
 		this.control({
-			'AttendanceGrid' : {
+			'attendanceGrid' : {
 				itemdblclick : this.editAttendance
 			},
 			'attendanceEdit button[action=save]' : {

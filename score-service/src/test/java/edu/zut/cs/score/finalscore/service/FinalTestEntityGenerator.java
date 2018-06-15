@@ -27,11 +27,11 @@ public class FinalTestEntityGenerator extends GenericGenerator{
 
 	List<FinalTest> finaltestList;
 
-	FinalTestManager studentManager;
+	FinalTestManager finaltestManager;
 	
 	@Autowired
 	public void setStudentManager(FinalTestManager finaltestManager) {
-		this.studentManager = finaltestManager;
+		this.finaltestManager = finaltestManager;
 	}
 
 	@Before
@@ -54,6 +54,10 @@ public class FinalTestEntityGenerator extends GenericGenerator{
 					if (j == 2)
 						s.setSno(value);
 					if (j == 3)
+						s.setSkaoqin(value);
+					if (j == 4)
+						s.setSpingshizuoye(value);
+					if (j == 5)
 						s.setSscore(value);
 				}
 			}
@@ -63,10 +67,10 @@ public class FinalTestEntityGenerator extends GenericGenerator{
 
 	@Test
 	public void test() {
-		this.studentManager.save(this.finaltestList);
-		List<FinalTest> result = this.studentManager.findAll();
+		this.finaltestManager.save(this.finaltestList);
+		List<FinalTest> result = this.finaltestManager.findAll();
 		if (logger.isInfoEnabled()) {
-			logger.info("test() - List<Student> result=" + result); //$NON-NLS-1$
+			logger.info("test() - List<FinalTest> result=" + result); //$NON-NLS-1$
 		}
 	}
 }

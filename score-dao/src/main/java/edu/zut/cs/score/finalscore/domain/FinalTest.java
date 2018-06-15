@@ -27,6 +27,12 @@ public class FinalTest extends BaseEntity{
 	@Column
 	String sscore;
 	
+	@Column
+	String skaoqin;
+	
+	@Column
+	String spingshizuoye;
+	
 	public String getSname() {
 		return sname;
 	}
@@ -37,6 +43,14 @@ public class FinalTest extends BaseEntity{
 
 	public String getSscore() {
 		return sscore;
+	}
+	
+	public String getSkaoqin() {
+		return skaoqin;
+	}
+	
+	public String getSpingshizuoye() {
+		return spingshizuoye;
 	}
 
 	
@@ -50,5 +64,13 @@ public class FinalTest extends BaseEntity{
 
 	public void setSscore(String sscore) {
 		this.sscore = sscore;
+	}
+	
+	public void setSkaoqin(String skaoqin) {
+		this.sscore = skaoqin;
+	}
+	
+	public void setSpingshizuoye(String spingshizuoye) {
+		this.spingshizuoye = spingshizuoye;
 	}
 }

@@ -18,22 +18,20 @@ Ext.define('finaltest.view.FinalTestGrid', {
 		sortable : true,
 		dataIndex : 'sname'
 	}, {
+		text : "考勤成绩",
+		width : 80,
+		sortable : true,
+		dataIndex : 's考勤'
+	} , {
+		text : "作业成绩",
+		width : 80,
+		sortable : true,
+		dataIndex : 'spingshizuoye'
+	} , {
 		text : "成绩",
 		width : 80,
 		sortable : true,
 		dataIndex : 'sscore'
-	}, {
-		text : "添加时间",
-		width : 150,
-		dataIndex : 'dateCreated',
-		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-		sortable : true
-	}, {
-		text : "修改时间",
-		width : 150,
-		dataIndex : 'dateModified',
-		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-		sortable : true
 	} ],
 	viewConfig : {
 		columnsText : '列',

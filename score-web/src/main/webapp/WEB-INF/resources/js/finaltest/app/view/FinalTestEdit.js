@@ -20,6 +20,14 @@ Ext.define('finaltest.view.FinalTestEdit', {
 				fieldLabel : '姓名'
 			}, {
 				xtype : 'textfield',
+				name : 'skaoqin',
+				fieldLabel : '考勤成绩'
+			}, {
+				xtype : 'textfield',
+				name : 'spingshizuoye',
+				fieldLabel : '作业成绩'
+			}, {
+				xtype : 'textfield',
 				name : 'sscore',
 				fieldLabel : '成绩'
 			}]

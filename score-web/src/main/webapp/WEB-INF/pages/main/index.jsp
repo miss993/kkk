@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Main</title>
+<title>成绩管理系统</title>
 <!-- 引入样式 -->
 <link rel="stylesheet"
 	href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">

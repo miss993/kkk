@@ -10,18 +10,16 @@ Ext.define('finaltest.model.FinalTestModel', {
 		type : 'string',
 		sortable : true
 	}, {
+		name : 'skaoqin',
+		type : 'string',
+		sortable : true
+	}, {
+		name : 'spingshizuoye',
+		type : 'string',
+		sortable : true
+	}, {
 		name : 'sscore',
 		type : 'string',
 		sortable : true
-	} , {
-		name : 'dateCreated',
-		type : 'date',
-		dateFormat : 'time',
-		sortable : true
-	}, {
-		name : 'dateModified',
-		type : 'date',
-		dateFormat : 'time',
-		sortable : true
-	}]
+	} ]
 });
