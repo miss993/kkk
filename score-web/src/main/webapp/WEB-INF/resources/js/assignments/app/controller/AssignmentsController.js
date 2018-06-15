@@ -6,16 +6,16 @@ Ext.define('assignments.controller.AssignmentsController', {
 	views : [ 'AssignmentsGrid', 'AssignmentsEdit' ],
 	init : function() {
 		this.control({
-			'AssignmentsGrid' : {
+			'assignmentsGrid' : {
 				itemdblclick : this.editAssignments
 			},
-			'AssignmentsEdit button[action=save]' : {
+			'assignmentsEdit button[action=save]' : {
 				click : this.updateAssignments
 			}
 		});
 	},
 	editAssignments : function(grid, record) {
-		var view = Ext.widget('AssignmentsEdit');
+		var view = Ext.widget('assignmentsEdit');
 		view.down('form').loadRecord(record);
 	},
 	updateAssignments : function(button) {
