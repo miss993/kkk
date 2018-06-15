@@ -306,10 +306,6 @@ var attendanceForm = new Ext.form.FormPanel({
 						fieldLabel : "姓名",
 						xtype : 'textfield',
 						name : 'name'
-					}, {
-						fieldLabel : "性别",
-						xtype : 'textfield',
-						name : 'sex'
 					}],
 			buttons : [{
 						xtype : 'button',
