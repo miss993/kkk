@@ -41,7 +41,8 @@ public class Assignments  extends BaseEntity{
 	String score5;
 	
 	/*
-	 * get和set实现
+	 * 各个字段的get和set的实现函数
+	 * 
 	 */
 
 	public String getName() {

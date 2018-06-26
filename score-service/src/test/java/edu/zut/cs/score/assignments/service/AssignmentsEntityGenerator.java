@@ -46,6 +46,11 @@ public class AssignmentsEntityGenerator extends GenericGenerator{
 		@SuppressWarnings("resource")
 		XSSFWorkbook wb = new XSSFWorkbook(input);
 		XSSFSheet sheet = wb.getSheetAt(0);
+		/*
+		 * 
+		 * 读取execl中行列内容，逐行逐字段存入数据库
+		 * 
+		 */
 		for(int i=1;i<=sheet.getLastRowNum();i++) {
 			Row row = sheet.getRow(i);
 			Assignments s = new Assignments();
@@ -74,7 +79,9 @@ public class AssignmentsEntityGenerator extends GenericGenerator{
 		}
 	}
 	/**
+	 * 
 	 * Test测试
+	 * 
 	 */
 	@Test
 	public void test() {
