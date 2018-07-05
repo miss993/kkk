@@ -34,6 +34,10 @@ Ext.define('homework.model.HomeworkModel', {
 		type : 'integer',
 		sortable : true
 	},{
+		name : 'finalmark',
+		type : 'integer',
+		sortable : true
+	},{
 		name : 'dateCreated',
 		type : 'date',
 		dateFormat : 'time',

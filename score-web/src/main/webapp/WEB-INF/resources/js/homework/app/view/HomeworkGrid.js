@@ -43,10 +43,15 @@ Ext.define('homework.view.HomeworkGrid', {
 		sortable : true,
 		dataIndex : 'address'
 	} ,{
-		text : "成绩",
+		text : "平时成绩",
 		width : 120,
 		sortable : true,
 		dataIndex : 'mark'
+	} ,{
+		text : "验收成绩",
+		width : 120,
+		sortable : true,
+		dataIndex : 'finalmark'
 	}],
 	viewConfig : {
 		columnsText : '列',

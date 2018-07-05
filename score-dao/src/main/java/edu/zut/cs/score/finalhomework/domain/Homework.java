@@ -49,11 +49,23 @@ public class Homework extends BaseEntity{
 	@Column
 	String major;
 	/**
-	 * 学生成绩
+	 * 平时成绩
 	 */
 	@Column
 	Integer mark;
-	
+	/**
+	 * 验收成绩
+	 * */
+	@Column
+	Integer finalmark;
+
+	public Integer getFinalmark() {
+		return finalmark;
+	}
+
+	public void setFinalmark(Integer finalmark) {
+		this.finalmark = finalmark;
+	}
 
 	public Integer getMark() {
 		return mark;

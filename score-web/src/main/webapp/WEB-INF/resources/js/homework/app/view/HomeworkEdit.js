@@ -37,7 +37,11 @@ Ext.define('homework.view.HomeworkEdit', {
 			},{
 				xtype : 'textfield',
 				name : 'mark',
-				fieldLabel : '成绩'
+				fieldLabel : '平时成绩'
+			},{
+				xtype : 'textfield',
+				name : 'finalmark',
+				fieldLabel : '验收成绩'
 			}]
 		} ];
 		this.buttons = [ {
